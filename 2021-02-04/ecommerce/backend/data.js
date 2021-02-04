@@ -15,7 +15,6 @@ const products =  [
       price: 160,
       stars: 4.5,
     },
-  /*
     {
       _id: "3",
       url: "https://picsum.photos/id/502/800/600",
@@ -64,7 +63,6 @@ const products =  [
       price: 60,
       stars: 4.5,
     },
-  */
   ];
 
 export default products;
