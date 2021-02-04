@@ -1,6 +1,6 @@
 import './App.css';
 
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import Header from './components/Header.js';
 import Footer from './components/Footer.js';
@@ -8,8 +8,6 @@ import Sidebar from './components/Sidebar.js';
 
 import Home from './pages/Home';
 import ProductDetail from './pages/ProductDetail.js';
-
-//import products from './data.js';
 
 function App() {
   return (
@@ -20,10 +18,10 @@ function App() {
 
         <main className="main">
           <div className="content">
-
+          <Switch>
             <Route path="/" exact={true} component={Home} />
             <Route path="/product/:id" component={ProductDetail} />
-
+          </Switch>
           </div>
         </main>
 

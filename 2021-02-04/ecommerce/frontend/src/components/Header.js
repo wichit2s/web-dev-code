@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 function Header() {
   return (
     <header className="header">
@@ -5,7 +7,7 @@ function Header() {
         <button onclick="openMenu()">
           &#9776;
         </button>
-        <a href="index.html">amazona</a>
+        <Link to="/">amazona</Link>
       </div>
       <div className="header-links">
         <a href="cart.html">Cart</a>
