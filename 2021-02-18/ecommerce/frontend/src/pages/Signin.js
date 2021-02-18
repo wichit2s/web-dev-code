@@ -10,15 +10,15 @@ function Signin(props) {
   const [password, setPassword] = useState('');
 
   const userSignin = useSelector(state => state.userSignin);
-  const { loading, userInfo, error } = userSignin;
+  const { loading, user, error } = userSignin;
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (userInfo) {
+    if (user) {
       props.history.push('/');
     }
     return () => {};
-  }, [userInfo]);
+  }, [user]);
 
   const submitHandler = (e) => {
     e.preventDefault();

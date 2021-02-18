@@ -77,8 +77,9 @@ app.get('/api/products', async (_, res) => {
 });
 
 // product._id 
-app.get('/api/product/:id', (_, res) => {
+app.get('/api/product/:id', async (req, res) => {
   // const product = products.find(x => x._id === req.params.id);
+  const product = await Product.find({_id: req.params.id})
   res.send(product);
 })
 

@@ -4,9 +4,9 @@ import { productListReducer, productDetailReducer } from './reducers/product.js'
 import { userSigninReducer } from './reducers/user.js';
 import cookie from 'js-cookie';
 
-const userInfo = cookie.getJSON( 'userInfo' ) || null;
+const user = cookie.getJSON( 'user' ) || null;
 
-const initialState = { userSignin: { userInfo } };
+const initialState = { userSignin: { user } };
 
 const reducers = combineReducers({
   productList:   productListReducer,
